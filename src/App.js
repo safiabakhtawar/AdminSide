@@ -12,7 +12,7 @@ import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
 import Geography from "./scenes/geography";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 
@@ -24,9 +24,21 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="app">
+        <Box
+          className="app"
+          sx={{
+            minHeight: "100vh",
+            backgroundColor: theme.palette.background.default,
+          }}
+        >
           <Sidebar isSidebar={isSidebar} />
-          <main className="content">
+          <Box
+            component="main"
+            className="content"
+            sx={{
+              backgroundColor: theme.palette.background.default,
+            }}
+          >
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -41,8 +53,8 @@ function App() {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/geography" element={<Geography />} />
             </Routes>
-          </main>
-        </div>
+          </Box>
+        </Box>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

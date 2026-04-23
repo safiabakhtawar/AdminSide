@@ -34,7 +34,7 @@ const Calendar = () => {
   };
 
   return (
-    <Box m="20px">
+    <Box sx={{ px: { xs: 2, md: 3 }, pb: { xs: 3, md: 4 }, pt: { xs: 2, md: 3 } }}>
       <Typography
         variant="h4"
         color={colors.grey[100]}
@@ -45,6 +45,9 @@ const Calendar = () => {
       </Typography>
       <Box
         sx={{
+          borderRadius: "20px",
+          overflow: "hidden",
+          border: `1px solid ${colors.primary[600]}`,
           "& .fc": {
             backgroundColor: colors.primary[400],
             color: colors.grey[100],

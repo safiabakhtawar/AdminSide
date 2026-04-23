@@ -74,15 +74,15 @@ export const tokens = (mode) => ({
           900: "#e0e0e0",
         },
         primary: {
-          100: "#040509",
-          200: "#080b12",
-          300: "#0c101b",
-          400: "#f2f0f0", // manually changed
-          500: "#141b2d",
-          600: "#1F2A40",
-          700: "#727681",
-          800: "#a1a4ab",
-          900: "#d0d1d5",
+          100: "#d7e3f4",
+          200: "#c3d3eb",
+          300: "#aebfd9",
+          400: "#f7f9fc",
+          500: "#edf2f7",
+          600: "#d9e2ec",
+          700: "#9aa5b1",
+          800: "#52606d",
+          900: "#1f2a40",
         },
         greenAccent: {
           100: "#0f2922",
@@ -159,6 +159,11 @@ export const themeSettings = (mode) => {
             },
             background: {
               default: "#fcfcfc",
+              paper: colors.primary[400],
+            },
+            text: {
+              primary: colors.grey[100],
+              secondary: colors.grey[400],
             },
           }),
     },

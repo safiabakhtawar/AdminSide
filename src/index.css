@@ -3,8 +3,7 @@
 html,
 body,
 #root,
-.app,
-.content {
+.app {
   height: 100%;
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
@@ -17,11 +16,14 @@ body {
 .app {
   display: flex;
   position: relative;
-  background-color: #141b2d;
 }
 
 .content {
   flex: 1;
+  min-width: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
 }
 

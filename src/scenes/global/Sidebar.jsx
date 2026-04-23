@@ -48,6 +48,7 @@ const Sidebar = () => {
         display: "flex",
         height: "100%",
         minHeight: "100vh",
+        borderRight: `1px solid ${colors.primary[600]}`,
         "& .ps-sidebar-container": {
           background: `${colors.primary[400]} !important`,
         },
@@ -109,7 +110,7 @@ const Sidebar = () => {
                   ADMINIS
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuOutlinedIcon />
+                  <MenuOutlinedIcon sx={{ color: colors.grey[100] }} />
                 </IconButton>
               </Box>
             )}

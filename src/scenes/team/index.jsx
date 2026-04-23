@@ -42,19 +42,20 @@ const Team = () => {
       renderCell: ({ row: { access } }) => {
         return (
           <Box
-            width="60%"
-            m="0 auto"
-            p="5px"
-            display="flex"
-            justifyContent="center"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : access === "manager"
-                ? colors.greenAccent[700]
-                : colors.greenAccent[700]
-            }
-            borderRadius="4px"
+            sx={{
+              width: "60%",
+              m: "0 auto",
+              p: "5px",
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor:
+                access === "admin"
+                  ? colors.greenAccent[600]
+                  : access === "manager"
+                  ? colors.greenAccent[700]
+                  : colors.greenAccent[700],
+              borderRadius: "4px",
+            }}
           >
             {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
             {access === "manager" && <SecurityOutlinedIcon />}
@@ -69,12 +70,12 @@ const Team = () => {
   ];
 
   return (
-    <Box m="20px">
+    <Box sx={{ m: "20px" }}>
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box
-        m="40px 0 0 0"
-        height="75vh"
         sx={{
+          m: "40px 0 0 0",
+          height: "75vh",
           "& .MuiDataGrid-root": {
             border: "none",
           },
